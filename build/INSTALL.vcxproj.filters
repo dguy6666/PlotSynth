@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Projects\PlotSynth\build\CMakeFiles\664f2851a53c5dda5bf6ec652af45214\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{15FA378B-BBEF-3138-9A3C-1C357FD368FB}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

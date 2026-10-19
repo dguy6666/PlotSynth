@@ -1,0 +1,9 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Projects/PlotSynth/build/cmake_install.cmake",
+		"C:/Projects/PlotSynth/build/flutter/cmake_install.cmake",
+		"C:/Projects/PlotSynth/build/runner/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
