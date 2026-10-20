@@ -1,0 +1,92 @@
+favorite projects
+search with filters maybe
+add image instead of project icon
+rename project
+delete project with confirmation
+version number in MainScreen bottom
+when long click or right click on project square it will show options to delete, add image, rename, and favorite. maybe favorite will be outside this menu
+ 
+
+MainScreen
+SettingsScreen
+ProjectWorkspaceScreen
+
+Recommendation: Use Screen (or View)
+
+Empty state / First card conflict
+Having both ProjectCard and AddNewProjectCard listed directly inside GridView.builder is conceptually fine, but remember that in the code's itemBuilder, you will use an if (index == 0) check to return AddNewProjectCard, and return ProjectCard for index - 1.
+
+Build ONE ProjectWorkspacePage with 5 tab views.
+
+Never push 5 separate route pages for different areas of the same project. Here is why:
+
+    Shared Project Context: All 5 tabs (e.g., Notes/Editor, Character Index, Timeline/Events, Inconsistency Audit, Settings/Export) belong to the same project entity. Having one parent screen allows you to load the project's data once at the root and provide it downward without re-fetching or passing arguments on every screen switch.
+
+    Preserving Tab State: If you use a single page with TabBarView and wrap your tab bodies in AutomaticKeepAliveClientMixin, switching between tabs won't lose your scroll position, cursor location in an open note, or filter state in the audit report.
+
+    Navigation Simplicity: When the user taps the back button (Navigator.pop(context)), they expect to return to the MainScreen (Projects Grid), not to navigate backward through 12 internal tab switches.
+
+MainScreen tree for now:
+
+.
+└── PlotSynthApp (StatelessWidget)/
+    └── MaterialApp (StatelessWidget)/
+        └── MainScreen (StatefulWidget)/
+            └── Scaffold (StatelessWidget)/
+                ├── AppBar (StatelessWidget) [backgroundColor: transparent, elevation: 0]/
+                │   ├── title: Text (StatelessWidget) ['Projects']
+                │   └── actions:/
+                │       ├── IconButton (StatelessWidget) [Search icon -> triggers showSearch]
+                │       ├── IconButton (StatelessWidget) [Sync/DB status]
+                │       └── IconButton (StatelessWidget) [Account profile] (circle)
+                ├── drawer: Drawer (StatelessWidget)/
+                │   └── SafeArea (StatelessWidget)/
+                │       └── Column (StatelessWidget)/
+                │           ├── ListTile (StatelessWidget)/
+                │           │   ├── leading: Icon (StatelessWidget) [Sort by Name A-Z]
+                │           │   └── title: Text (StatelessWidget) [Name (A-Z)]
+                │           ├── ListTile (StatelessWidget)/
+                │           │   ├── leading: Icon (StatelessWidget) [Sort by Date]
+                │           │   └── title: Text (StatelessWidget) [Last Modified]
+                │           ├── Divider (StatelessWidget)
+                │           └── ListTile (StatelessWidget) [onTap: Navigator.push to SettingsPage]/
+                │               ├── leading: Icon (StatelessWidget) [Settings icon]
+                │               └── title: Text (StatelessWidget) [Settings]
+                └── Body: Padding (StatelessWidget)/
+                    └── GridView.builder (StatelessWidget)/
+                        ├── AddNewProjectCard (StatelessWidget) [Custom widget] [Index 0]/
+                        │   └── Card (StatelessWidget)/
+                        │       └── InkWell (StatefulWidget) [Click/tap ripple effect]/
+                        │           └── Padding (StatelessWidget)/
+                        │               └── Center (StatelessWidget)/
+                        │                   └── Column (StatelessWidget) [mainAxisSize: min, crossAxisAlignment: center]/
+                        │                       └── Icon (StatelessWidget) ['+' icon]
+                        └── ProjectCard (StatelessWidget) [Custom widget] [Index > 0: onTap -> Navigator.push to ProjectWorkspacePage]/
+                            └── Card (StatelessWidget)/
+                                └── InkWell (StatefulWidget) [Click/tap ripple effect]/
+                                    └── Padding (StatelessWidget)/
+                                        └── Center (StatelessWidget)/
+                                            └── Column (StatelessWidget) [mainAxisSize: min, crossAxisAlignment: center]/
+                                                ├── Icon (StatelessWidget)
+                                                ├── SizedBox (StatelessWidget) [Spacing]
+                                                ├── Text (StatelessWidget) [Project Name]
+                                                ├── SizedBox (StatelessWidget) [Spacing]
+                                                └── Text (StatelessWidget) [Last Modified Date]
+
+
+ProjectWorkspaceScreen (StatefulWidget) [Loads project data, manages DefaultTabController]
+└── Scaffold (StatelessWidget)
+    ├── AppBar (StatelessWidget)
+    │   ├── title: Text (StatelessWidget) [Project Name]
+    │   └── bottom: TabBar (StatefulWidget)
+    │       ├── Tab [Notes / Lore]
+    │       ├── Tab [Characters]
+    │       ├── Tab [Timeline]
+    │       ├── Tab [Fact Graph]
+    │       └── Tab [Inconsistencies]
+    └── body: TabBarView (StatefulWidget)
+        ├── NotesTabView (StatelessWidget / StatefulWidget)
+        ├── CharactersTabView (StatelessWidget / StatefulWidget)
+        ├── TimelineTabView (StatelessWidget / StatefulWidget)
+        ├── FactGraphTabView (StatelessWidget / StatefulWidget)
+        └── InconsistenciesTabView (StatelessWidget / StatefulWidget)
