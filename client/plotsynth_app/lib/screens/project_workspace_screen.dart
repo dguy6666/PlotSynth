@@ -787,7 +787,7 @@ class _AnalyzeChangesDialogState extends State<_AnalyzeChangesDialog> {
                 child: ListView.separated(
                   shrinkWrap: true,
                   itemCount: _editableFacts.length,
-                  separatorBuilder: (_, __) => const SizedBox(height: 8),
+                  separatorBuilder: (_, _) => const SizedBox(height: 8),
                   itemBuilder: (context, idx) {
                     final fact = _editableFacts[idx];
                     if (_isEditMode) {

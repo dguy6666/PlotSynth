@@ -52,59 +52,31 @@
 
 import 'package:flutter/material.dart';
 
+
 class AddNewProjectCard extends StatelessWidget {
+
   final VoidCallback onTap;
 
-  const AddNewProjectCard({
-    super.key,
-    required this.onTap,
-  });
+  const AddNewProjectCard({super.key, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: const Color(0xFFFFF2C6),
-      elevation: 0,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(22),
-        side: const BorderSide(
-          color: Color(0xFFE6C88A),
-          width: 1.5,
-        ),
-      ),
-      clipBehavior: Clip.antiAlias,
+      
       child: InkWell(
         onTap: onTap,
-        splashColor: const Color(0xFFF6C995).withValues(alpha: 0.35),
-        highlightColor: const Color(0xFFF6C995).withValues(alpha: 0.15),
         child: Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(12.0),
           child: Center(
             child: Column(
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Container(
-                  width: 56,
-                  height: 56,
-                  decoration: BoxDecoration(
-                    color: const Color(0xFFF6C995).withValues(alpha: 0.35),
-                    shape: BoxShape.circle,
-                  ),
-                  child: const Icon(
-                    Icons.add_rounded,
-                    size: 34,
-                    color: Color(0xFF8C5A2B),
-                  ),
-                ),
-                const SizedBox(height: 10),
-                const Text(
+                const Icon(Icons.add, size: 40),
+                SizedBox(height: 8),
+                Text(
                   'New Project',
-                  style: TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w600,
-                    color: Color(0xFF6E4720),
-                  ),
+                  style: TextStyle(fontWeight: FontWeight.w500),
                 ),
               ],
             ),
@@ -114,3 +86,68 @@ class AddNewProjectCard extends StatelessWidget {
     );
   }
 }
+
+// import 'package:flutter/material.dart';
+
+// class AddNewProjectCard extends StatelessWidget {
+//   final VoidCallback onTap;
+
+//   const AddNewProjectCard({
+//     super.key,
+//     required this.onTap,
+//   });
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Card(
+//       color: const Color(0xFFFFF2C6),
+//       elevation: 0,
+//       shape: RoundedRectangleBorder(
+//         borderRadius: BorderRadius.circular(22),
+//         side: const BorderSide(
+//           color: Color(0xFFE6C88A),
+//           width: 1.5,
+//         ),
+//       ),
+//       clipBehavior: Clip.antiAlias,
+//       child: InkWell(
+//         onTap: onTap,
+//         splashColor: const Color(0xFFF6C995).withValues(alpha: 0.35),
+//         highlightColor: const Color(0xFFF6C995).withValues(alpha: 0.15),
+//         child: Padding(
+//           padding: const EdgeInsets.all(16.0),
+//           child: Center(
+//             child: Column(
+//               mainAxisSize: MainAxisSize.min,
+//               crossAxisAlignment: CrossAxisAlignment.center,
+//               children: [
+//                 Container(
+//                   width: 56,
+//                   height: 56,
+//                   decoration: BoxDecoration(
+//                     color: const Color(0xFFF6C995).withValues(alpha: 0.35),
+//                     shape: BoxShape.circle,
+//                   ),
+//                   child: const Icon(
+//                     Icons.add_rounded,
+//                     size: 34,
+//                     color: Color(0xFF8C5A2B),
+//                   ),
+//                 ),
+//                 const SizedBox(height: 10),
+//                 const Text(
+//                   'New Project',
+//                   style: TextStyle(
+//                     fontSize: 14,
+//                     fontWeight: FontWeight.w600,
+//                     color: Color(0xFF6E4720),
+//                   ),
+//                 ),
+//               ],
+//             ),
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }
