@@ -12,7 +12,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "flutter/Release/flutter_wrapper_plugin.lib"
+			"path" : "flutter/Debug/flutter_wrapper_app.lib"
 		}
 	],
 	"backtrace" : 1,
@@ -43,19 +43,19 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 59,
+				"line" : 75,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 72,
+				"line" : 84,
 				"parent" : 0
 			},
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 63,
+				"line" : 79,
 				"parent" : 0
 			},
 			{
@@ -82,19 +82,25 @@
 			{
 				"command" : 5,
 				"file" : 1,
+				"line" : 45,
+				"parent" : 3
+			},
+			{
+				"command" : 5,
+				"file" : 1,
 				"line" : 44,
 				"parent" : 3
 			},
 			{
 				"command" : 6,
 				"file" : 0,
-				"line" : 69,
+				"line" : 81,
 				"parent" : 0
 			},
 			{
 				"command" : 7,
 				"file" : 0,
-				"line" : 68,
+				"line" : 80,
 				"parent" : 0
 			},
 			{
@@ -111,7 +117,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O2 /Ob2 /DNDEBUG -std:c++17"
+					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17"
 				},
 				{
 					"backtrace" : 4,
@@ -138,6 +144,10 @@
 				},
 				{
 					"backtrace" : 8,
+					"define" : "_DEBUG"
+				},
+				{
+					"backtrace" : 9,
 					"define" : "_HAS_EXCEPTIONS=0"
 				},
 				{
@@ -148,11 +158,11 @@
 			"includes" : 
 			[
 				{
-					"backtrace" : 9,
+					"backtrace" : 10,
 					"path" : "C:/Projects/PlotSynth/client/plotsynth_app/windows/flutter/ephemeral/cpp_client_wrapper/include"
 				},
 				{
-					"backtrace" : 10,
+					"backtrace" : 11,
 					"path" : "C:/Projects/PlotSynth/client/plotsynth_app/windows/flutter/ephemeral"
 				}
 			],
@@ -161,7 +171,7 @@
 			{
 				"backtraces" : 
 				[
-					11
+					12
 				],
 				"standard" : "17"
 			},
@@ -169,23 +179,24 @@
 			[
 				0,
 				1,
-				2
+				2,
+				3
 			]
 		}
 	],
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 2,
-			"id" : "flutter_assemble::@2bb09fbb03a373b2cb34"
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
 		},
 		{
-			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
+			"backtrace" : 2,
+			"id" : "flutter_assemble::@2bb09fbb03a373b2cb34"
 		}
 	],
-	"id" : "flutter_wrapper_plugin::@2bb09fbb03a373b2cb34",
-	"name" : "flutter_wrapper_plugin",
-	"nameOnDisk" : "flutter_wrapper_plugin.lib",
+	"id" : "flutter_wrapper_app::@2bb09fbb03a373b2cb34",
+	"name" : "flutter_wrapper_app",
+	"nameOnDisk" : "flutter_wrapper_app.lib",
 	"paths" : 
 	{
 		"build" : "flutter",
@@ -199,14 +210,15 @@
 			[
 				0,
 				1,
-				2
+				2,
+				3
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				3
+				4
 			]
 		}
 	],
@@ -230,7 +242,14 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"isGenerated" : true,
-			"path" : "flutter/ephemeral/cpp_client_wrapper/plugin_registrar.cc",
+			"path" : "flutter/ephemeral/cpp_client_wrapper/flutter_engine.cc",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "flutter/ephemeral/cpp_client_wrapper/flutter_view_controller.cc",
 			"sourceGroupIndex" : 0
 		},
 		{

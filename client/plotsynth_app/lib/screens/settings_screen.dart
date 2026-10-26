@@ -52,7 +52,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
             children: [
               SwitchListTile(
                 value: _offlineOnly,
-                activeColor: const Color(0xFF8C5A2B),
+                activeThumbColor: const Color(0xFF8C5A2B),
                 title: const Text(
                   'Offline-First Mode (Local SQLite)',
                   style: TextStyle(fontWeight: FontWeight.w600),
@@ -69,7 +69,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               const Divider(height: 1),
               SwitchListTile(
                 value: _aesEncryption,
-                activeColor: const Color(0xFF8C5A2B),
+                activeThumbColor: const Color(0xFF8C5A2B),
                 title: const Text(
                   'AES-256 Manuscript Encryption',
                   style: TextStyle(fontWeight: FontWeight.w600),
@@ -91,7 +91,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
             children: [
               SwitchListTile(
                 value: _showMlTips,
-                activeColor: const Color(0xFF8C5A2B),
+                activeThumbColor: const Color(0xFF8C5A2B),
                 title: const Text(
                   'Show Tips During ML Analysis',
                   style: TextStyle(fontWeight: FontWeight.w600),

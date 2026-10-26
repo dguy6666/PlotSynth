@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "runner/Debug/plotsynth_app.exe"
+			"path" : "runner/Release/plotsynth_app.exe"
 		},
 		{
-			"path" : "runner/Debug/plotsynth_app.pdb"
+			"path" : "runner/Release/plotsynth_app.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -140,12 +140,6 @@
 			{
 				"command" : 6,
 				"file" : 1,
-				"line" : 45,
-				"parent" : 9
-			},
-			{
-				"command" : 6,
-				"file" : 1,
 				"line" : 44,
 				"parent" : 9
 			},
@@ -169,7 +163,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 -std:c++17"
+					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O2 /Ob2 /DNDEBUG -std:c++17"
 				},
 				{
 					"backtrace" : 10,
@@ -220,10 +214,6 @@
 				},
 				{
 					"backtrace" : 19,
-					"define" : "_DEBUG"
-				},
-				{
-					"backtrace" : 20,
 					"define" : "_HAS_EXCEPTIONS=0"
 				},
 				{
@@ -234,7 +224,7 @@
 			"includes" : 
 			[
 				{
-					"backtrace" : 21,
+					"backtrace" : 20,
 					"path" : "C:/Projects/PlotSynth/client/plotsynth_app/windows"
 				},
 				{
@@ -251,7 +241,7 @@
 			{
 				"backtraces" : 
 				[
-					22
+					21
 				],
 				"standard" : "17"
 			},
@@ -268,7 +258,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-DWIN32 -D_DEBUG"
+					"fragment" : "-DWIN32"
 				}
 			],
 			"defines" : 
@@ -303,10 +293,6 @@
 				},
 				{
 					"backtrace" : 19,
-					"define" : "_DEBUG"
-				},
-				{
-					"backtrace" : 20,
 					"define" : "_HAS_EXCEPTIONS=0"
 				},
 				{
@@ -317,7 +303,7 @@
 			"includes" : 
 			[
 				{
-					"backtrace" : 21,
+					"backtrace" : 20,
 					"path" : "C:/Projects/PlotSynth/client/plotsynth_app/windows"
 				},
 				{
@@ -339,15 +325,15 @@
 	"dependencies" : 
 	[
 		{
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
+		},
+		{
 			"backtrace" : 4,
 			"id" : "flutter_wrapper_app::@2bb09fbb03a373b2cb34"
 		},
 		{
 			"backtrace" : 8,
 			"id" : "flutter_assemble::@2bb09fbb03a373b2cb34"
-		},
-		{
-			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "plotsynth_app::@056c4f61b0156d1d9b06",
@@ -357,7 +343,7 @@
 		[
 			{
 				"backtrace" : 3,
-				"path" : "C:/Projects/PlotSynth/build/runner/Debug"
+				"path" : "C:/Projects/PlotSynth/build/runner/Release"
 			}
 		],
 		"prefix" : 
@@ -370,11 +356,11 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1",
+				"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O2 /Ob2 /DNDEBUG",
 				"role" : "flags"
 			},
 			{
-				"fragment" : "/machine:x64 /debug /INCREMENTAL",
+				"fragment" : "/machine:x64 /INCREMENTAL:NO",
 				"role" : "flags"
 			},
 			{
@@ -383,7 +369,7 @@
 			},
 			{
 				"backtrace" : 4,
-				"fragment" : "..\\flutter\\Debug\\flutter_wrapper_app.lib",
+				"fragment" : "..\\flutter\\Release\\flutter_wrapper_app.lib",
 				"role" : "libraries"
 			},
 			{

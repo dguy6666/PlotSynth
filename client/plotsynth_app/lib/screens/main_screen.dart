@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:plotsynth_app/providers/projects_provider.dart';
 import 'package:plotsynth_app/widgets/add_new_project_card.dart';
 import 'package:plotsynth_app/widgets/project_card.dart';
 import 'project_workspace_screen.dart';
@@ -20,78 +22,46 @@ class _MainScreenState extends State<MainScreen> {
   // Default sort option
   ProjectSortOption _currentSort = ProjectSortOption.lastModified;
 
-  // Active projects list (replace with DB fetch when ready)
-  final List<Project> _allProjects = [
-    Project(
-      id: '1',
-      name: 'Cyberpunk Odyssey',
-      lastModified: DateTime.now().subtract(const Duration(days: 2)),
-    ),
-    Project(
-      id: '2',
-      name: 'Whispers in the Dark',
-      lastModified: DateTime.now().subtract(const Duration(hours: 4)),
-    ),
-    Project(
-      id: '3',
-      name: 'Aether Chronicles',
-      lastModified: DateTime.now().subtract(const Duration(days: 10)),
-    ),
-  ];
+  // List<Project> _allProjects = context
+  
+  
 
-  // Filters and sorts projects dynamically
-  List<Project> get _visibleProjects {
-    // 1. Filter by search query
-    List<Project> list = _allProjects.where((p) {
-      return p.name.toLowerCase().contains(_searchQuery.toLowerCase());
-    }).toList();
+  // // Filters and sorts projects dynamically
+  // List<Project> get _visibleProjects {
+  //   // 1. Filter by search query
+  //   List<Project> list = _allProjects.where((p) {
+  //     return p.name.toLowerCase().contains(_searchQuery.toLowerCase());
+  //   }).toList();
 
-    // 2. Sort the filtered list
-    switch (_currentSort) {
-      case ProjectSortOption.nameAZ:
-        list.sort((a, b) => a.name.toLowerCase().compareTo(b.name.toLowerCase()));
-        break;
-      case ProjectSortOption.nameZA:
-        list.sort((a, b) => b.name.toLowerCase().compareTo(a.name.toLowerCase()));
-        break;
-      case ProjectSortOption.lastModified:
-        list.sort((a, b) => b.lastModified.compareTo(a.lastModified));
-        break;
-      case ProjectSortOption.firstModified:
-        list.sort((a, b) => a.lastModified.compareTo(b.lastModified));
-        break;
-      case ProjectSortOption.favoritesOnly:
-        // Default to last modified order for favorites
-        list.sort((a, b) => b.lastModified.compareTo(a.lastModified));
-        break;
-    }
+  //   // 2. Sort the filtered list
+  //   switch (_currentSort) {
+  //     case ProjectSortOption.nameAZ:
+  //       list.sort((a, b) => a.name.toLowerCase().compareTo(b.name.toLowerCase()));
+  //       break;
+  //     case ProjectSortOption.nameZA:
+  //       list.sort((a, b) => b.name.toLowerCase().compareTo(a.name.toLowerCase()));
+  //       break;
+  //     case ProjectSortOption.lastModified:
+  //       list.sort((a, b) => b.lastModified.compareTo(a.lastModified));
+  //       break;
+  //     case ProjectSortOption.firstModified:
+  //       list.sort((a, b) => a.lastModified.compareTo(b.lastModified));
+  //       break;
+  //     case ProjectSortOption.favoritesOnly:
+  //       // Default to last modified order for favorites
+  //       list.sort((a, b) => b.lastModified.compareTo(a.lastModified));
+  //       break;
+  //   }
 
-    return list;
-  }
+  //   return list;
+  // }
 
-  void _createNewProject() {
-    final newProject = Project(
-      id: DateTime.now().millisecondsSinceEpoch.toString(),
-      name: 'New Project ${_allProjects.length + 1}',
-      lastModified: DateTime.now(),
-    );
-
-    setState(() {
-      _allProjects.add(newProject);
-    });
-
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (_) => ProjectWorkspaceScreen(),
-      ),
-    );
-  }
+  
 
   @override
   Widget build(BuildContext context) {
-    final visibleList = _visibleProjects;
-
+    // final visibleList = _visibleProjects;
+    
     return Scaffold(
       appBar: MainScreenAppBar(
         currentSort: _currentSort,
@@ -147,7 +117,7 @@ class _MainScreenState extends State<MainScreen> {
         padding: const EdgeInsets.all(20.0),
         child: GridView.builder(
           // Slot 0 is always "Add New", followed by the filtered projects
-          itemCount: visibleList.length + 1,
+          itemCount: 1,//visibleList.length + 1,
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
             crossAxisSpacing: 20,
@@ -158,19 +128,33 @@ class _MainScreenState extends State<MainScreen> {
             // First item: Add Project button
             if (index == 0) {
               return AddNewProjectCard(
-                onTap: _createNewProject,
+                onTap: () {
+                  
+                  //var allProjectsProvider = Provider.of<ProjectsProvider>(context, listen:false);
+                  Project newProject = context.read<ProjectsProvider>().createNewProject();
+                  
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => ProjectWorkspaceScreen(project: newProject,),
+                    ),
+                  );
+              
+                }
               );
             }
 
             // Remaining items: Project cards (offset by 1)
-            final project = visibleList[index - 1];
+            //List<Project> allProjects = context.read<ProjectsProvider>().allProjects;
+
+            final project = context.read<ProjectsProvider>().allProjects[0];//visibleList[index - 1];
             return ProjectCard(
               project: project,
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (_) => ProjectWorkspaceScreen(),
+                    builder: (_) => ProjectWorkspaceScreen(project: project,),
                   ),
                 );
               },

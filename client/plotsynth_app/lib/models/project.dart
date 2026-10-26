@@ -1,19 +1,21 @@
 
 
+import 'package:plotsynth_app/models/text_version.dart';
+
 class Project{
   final String id;
   final String name;
   final DateTime lastModified;
-  final String ideasText;
-  final String storyText;
+  final List<TextVersion> ideasText;
+  final List<TextVersion> storyText;
   
 
   const Project({
     required this.id,
     required this.name,
     required this.lastModified,
-    this.ideasText = "",
-    this.storyText = "",
+    required this.ideasText,
+    required this.storyText,
     
   });
 
