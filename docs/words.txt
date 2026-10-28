@@ -1,0 +1,189 @@
+
+for extracting facts, finding contradictions and inconsistensies and forgotton details would synthesize be the right word or what
+
+לעבודה שאתה מתאר, המילה synthesize (לסנתז) היא לא המילה המדויקת ביותר. סנתוז עוסק בחיבור חלקים שונים לכדי שלם אחד חדש.
+הפעולות שציינת – שליפת עובדות, מציאת סתירות וזיהוי פרטים שנשכחו – עוסקות כולן בפירוק, בדיקה קפדנית והצלבה של מידע קיים.
+להלן המונחים המדויקים ביותר באנגלית ובעברית למה שאתה מחפש:
+
+המונח המדויק ביותר: Analyze (לנתח)
+
+ניתוח (Analysis) הוא ההפך המוחלט מסנתזה. מדובר בפירוק טקסט או מאגר מידע לגורמים כדי להבין את המבנה שלו, למצוא פערים ולחלץ עובדות.
+
+מונחים ממוקדים נוספים (לפי פעולה)
+
+• Cross-reference (הצלבה): המונח הטוב ביותר עבור מציאת סתירות ואי-עקביות. פעולה זו משווה בין מקורות שונים (או חלקים שונים באותו טקסט) כדי לראות אם הם תואמים או סותרים זה את זה.
+• Audit / Vet (לערוך ביקורת / לבדוק ביסודיות): מתאים מאוד למציאת פרטים שנשכחו או טעויות במידע, כמו בבדיקת חוזים או דוחות פיננסיים.
+• Parse / Extract (לפענח / לחלץ): המונח הטוב ביותר עבור שליפת עובדות ונתונים ספציפיים מתוך טקסט גולמי.
+• Scrutinize (לבחון בשבע עיניים): קריאה עמוקה וביקורתית מאוד במטרה למצוא פגמים, חוסר עקביות או פרטים חסרים.
+
+מתי בכל זאת משתמשים ב-Synthesize בתהליך הזה?
+
+אתה תשתמש ב-Synthesize רק בשלב האחרון: אחרי שחילצת את העובדות, מצאת את הסתירות והשלמת את הפרטים החסרים, אתה מסנתז את כל הממצאים האלו לכדי דוח סיכום אחד סופי (משלב את הכל לתמונה מלאה).
+באיזה סוג של חומר או טקסט אתה עובד (למשל: עדויות משפטיות, קוד תוכנה, מחקר אקדמי או ספרות)? אם תשתף, אוכל להתאים לך את שיטת העבודה או כלי ה-AI המדויקים ביותר למשימה זו.
+
+for extracting facts, finding contradictions and inconsistensies and forgotton details from a story and drafts for it. would synthesize be the right word for that or what? and for using those and fixing the story would that be the word synthesize or other word
+
+For the first part of your process (finding the issues), synthesize is not the correct word. For the second part (fixing the story using that information), synthesize is much closer, but there are even better words for creative writing.
+Here is the exact breakdown of the right terminology for both steps of editing your story and drafts.
+
+Part 1: Finding facts, contradictions, and forgotten details
+
+For this stage, you are breaking the text down and inspecting it. The correct terms are:
+• Story Auditing / Developmental Editing: This is the professional term in publishing. It means looking at the big picture of a manuscript to find plot holes, character inconsistencies, and structural issues.
+• Cross-examining / Fact-checking the drafts: Comparing your drafts against each other to find where the details don't match (e.g., a character having blue eyes in Draft 1 but green eyes in Draft 2).
+• Parsing / Dissecting: Breaking the story down scene-by-scene to extract the core facts and timeline.
+
+Part 2: Using those findings to fix the story
+
+For this stage, you are putting things back together. While synthesize can work here (because you are blending the best parts of different drafts into one final version), authors and editors usually use these more specific creative writing terms:
+• Reconciling: This is the perfect word for fixing contradictions. To "reconcile the drafts" means you take two conflicting facts and fix them so they finally make sense together.
+• Consolidating / Merging: Taking the forgotten details and the best elements from various drafts and combining them into a single, master draft.
+• Synthesizing: You can use this here if you mean: "I am synthesizing my notes and drafts into a cohesive final story."
+• Polishing / Refining: Smoothing out the inconsistencies so the final narrative flows perfectly without any bumps.
+
+Summary Table for Your Workflow
+
+
+Your Step	What it actually means	The Best Word to Use
+Step 1: Finding the issues	Analyzing and breaking down the drafts	Auditing / Cross-referencing
+Step 2: Fixing the contradictions	Making conflicting facts match up	Reconciling
+Step 3: Putting it all together	Combining the best pieces into a final story	Consolidating / Synthesizing
+
+Are you trying to write a prompt for an AI to help you do this with your drafts, or are you looking for the right terminology to describe your own writing process?
+
+what can be audited? a draft? a couple of drafts? notes? ideas?
+
+המילה Audit (ביקורת / בדיקה יסודית) מגיעה במקור מעולמות הפיננסים והחשבונאות, אך בעולם הכתיבה והתוכן היא קיבלה משמעות של בדיקה שיטתית וביקורתית כדי למצוא פערים, בעיות או חוסר עקביות.
+הנה מה שאפשר (ואי אפשר) להעביר תהליך של "Audit" מתוך הרשימה שלך:
+
+1. Draft (טיוטה אחת) – כן, בהחלט
+
+• מה בודקים: כשעושים קריאת ביקורת (Story/Manuscript Audit) לטיוטה בודדת, מחפשים חורים בעלילה (Plot holes), בעיות בקצב, דמויות שמשנות התנהגות בלי סיבה, או חוסר היגיון פנימי בתוך הסיפור עצמו.
+
+2. A Couple of Drafts (כמה טיוטות יחד) – כן, וזה הכי רלוונטי עבורך
+
+• מה בודקים: זהו "Cross-draft Audit" (ביקורת הצלבת טיוטות). כאן המטרה היא להשוות ביניהן כדי למצוא סתירות. לדוגמה: האם בטיוטה א' חוקי הקסם עובדים בצורה מסוימת ובטיוטה ב' הם השתנו? האם דמות שהרגת בטיוטה המוקדמת מופיעה פתאום חיה בטיוטה המאוחרת כי שכחת שמחקת את הסצנה?
+
+3. Notes (רשימות / הערות) – כן, אבל בצורה שונה
+
+• מה בודקים: "Notes Audit" מתמקד בבדיקה האם הרעיונות והמידע שרשמת לעצמך בצד אכן יושמו בפועל בתוך הסיפור, או כדי לוודא שספר החוקים של העולם שלך (Worldbuilding Lore) עקבי ולא סותר את עצמו.
+
+4. Ideas (ריונות גולמיים) – פחות מתאים למילה Audit
+
+• למה לא: רעיונות גולמיים הם מופשטים, גמישים ועדיין לא קיבלו צורה קבועה. אי אפשר באמת לעשות "ביקורת" למשהו שעוד לא נכתב.
+• באיזו מילה משתמשים במקום? עבור רעיונות משתמשים במונחים כמו Vetting (בדיקת היתכנות/סינון), Brainstorming (סיעור מוחות) או Evaluating (הערכה – כדי לראות אם הרעיון מספיק חזק כדי לפתח אותו לסיפור).
+
+מונחים מקצועיים שתוכל להשתמש בהם:
+
+• אם אתה עובד על טיוטה ומחפש בעיות, המונח הרשמי בעולם הספרות הוא Developmental Edit (עריכה פיתוחית) או Structural Audit (בדיקה מבנית).
+• אם אתה משווה בין הערות, רשימות וטיוטות שונות, המונח המדויק ביותר הוא Continuity Audit (בדיקת רצף ועקביות).
+האם יש לך טיוטה ספציפית והערות בצד שאתה רוצה להתחיל להצליב ביניהן עכשיו? אם תרצה, נוכל לעשות Continuity Audit ממוקד לחלק מסוים בסיפור שלך כדי לראות איך זה עובד.
+להתנסות בלי התאמה אישית
+
+putting in one place things i want in a story im writing while adding backstory and explanations and events but not a story with the inbetween , no talking or thinking, no emotions,. is that called notes or ideas or what
+
+הדבר שאתה מתאר נקרא לרוב Story Bible (תנ"ך של סיפור) או World-building Document (מסמך בניית עולם).
+בעולם הכתיבה המקצועי, זהו לא סתם אוסף של רעיונות, אלא מסמך מובנה שמרכז את כל ה"חוקים", ההיסטוריה והעובדות של הסיפור שלך, מבלי לכתוב את העלילה עצמה (בלי דיאלוגים, רגשות או תיאורים ספרותיים).
+להלן המונחים המדויקים ביותר למה שאתה יוצר, מהטוב ביותר לפחות מדויק:
+
+1. המונחים המדויקים ביותר (ההגדרה המקצועית)
+
+• Story Bible / Series Bible (תנ"ך של סיפור / סדרה): זהו המונח המקובל ביותר בקרב סופרים ותסריטאים. זהו קובץ מרכזי שמכיל את קורות החיים של הדמויות (Backstory), ציר הזמן של האירועים (Timeline), והסברים על איך העולם עובד, כדי שהכותב יוכל תמיד לחזור אליו ולבדוק עובדות.
+• World-building Journal / Lore (לור / מסמך בניית עולם): משתמשים בזה המון בפנטזיה, מדע בדיוני או סיפורים מורכבים. ה-"Lore" הוא כל המידע ההיסטורי, האירועים וההסברים של מה שקרה לפני שהסיפור בכלל התחיל.
+• Treatment / Outline (סינופסיס מורחב / מתווה): אם המסמך שלך מסודר לפי סדר האירועים שיקרו בסיפור (אירוע רודף אירוע) אבל רק ברמת העובדות היבשות ("דמות א' הולכת למקום ב' ומגלה ש..."), זה נקרא Outline או Treatment.
+
+2. למה זה לא סתם "Notes" או "Ideas"?
+
+• Ideas (רעיונות): זה מופשט מדי. רעיון זה "מה אם היה איש שיכול לעוף?". מה שאתה מתאר הוא כבר שלב מתקדם בהרבה – אתה כבר מחבר אירועים והסברים.
+• Notes (רשימות): רשימות הן בדרך כלל מבולגנות, קצרות וזמניות (למשל: "לזכור לשנות את השם של הגיבור"). מה שאתה עושה הוא ריכוז מובנה במקום אחד.
+
+סיכום: איך לקרוא לזה?
+
+אם מישהו שואל אותך מה אתה כותב עכשיו, התשובה הכי מדויקת היא:
+"אני עובד על ה-Story Bible (או ה-Outline) של הסיפור שלי. אני מרכז שם את כל אירועי הרקע, העובדות וההסברים היבשים."
+האם המסמך שאתה בונה מסודר לפי ציר זמן של אירועים (מה קורה אחרי מה), או שהוא מחולק לפי נושאים (דמויות, מקומות, היסטוריה)? אם תרצה, אוכל להציע לך מבנה קלאסי ל-Story Bible כדי שיהיה לך קל לנווט בו.
+
+but its not organized and its not proffesional.
+
+זה בסדר גמור שהוא לא מאורגן ולא מקצועי כרגע. למעשה, ככה בדיוק מתחיל כל Story Bible של כל סופר.
+בשלב שבו אתה נמצא, הדבר הכי חשוב הוא פשוט לפרוק את הכל מהראש אל הדף כדי שלא תשכח שום פרט. השלב המבולגן הזה הוא חיוני, ובעולם הכתיבה קוראים למסמך כזה בשמות קצת יותר "חופשיים":
+• Brain Dump (הצפת מוח / פריקת מחשבות): קובץ אחד שבו אתה זורק את כל מה שעולה לך לראש – אירוע רקע, חוק של העולם, הסבר על דמות – בלי לחשוב על סדר, עיצוב או ניסוח.
+• Scratchpad (בלוק טיוטה): מקום זמני לאיסוף חומרי גלם יבשים לפני שמסדרים אותם.
+• Raw Lore (מידע גולמי): כל העובדות וההיסטוריה של הסיפור שלך, פשוט בצורתן הראשונית והלא מלוטשת.
+אתה לא צריך להרגיש רע עם זה שזה לא נראה "מקצועי". המקצועיות מגיעה רק בשלב הבא – שלב הארגון והעריכה (ה-Audit וה-Synthesize שדיברנו עליהם קודם).
+רוצה שננסה לקחת חלק קטן מהבלגן הזה – למשל, רק את צירי הזמן או רק את ההסברים על הדמויות – ונתחיל לארגן אותם יחד למבנה מסודר?
+להתנסות בלי התאמה אישית
+
+not draft
+
+הבנתי אותך לגמרי. אם זה לא טיוטה (Draft) של הסיפור עצמו, וזה לא מסמך רשמי ומאורגן, המונח הכי מדויק בעברית ובאנגלית למה שיש לך ביד הוא "קובץ חומרי גלם" (Raw Notes / Working Document) או פשוט "מאגר המידע של הסיפור".
+זהו המקום שבו אתה אוסף את אבני הבניין של העולם שלך. מכיוון שאין שם עלילה זורמת, רגשות או דיאלוגים, אלא רק עובדות יבשות, אירועים והסברים, אפשר לקרוא לזה:
+• Story Wiki (ויקי של הסיפור): כמו ויקיפדיה פרטית ומבולגנת של הסיפור שלך. יש שם ערכים, הסברים ואירועים, אבל הם עדיין לא מסודרים.
+• Background Material (חומרי רקע): כל המידע שאתה חייב לדעת ככותב, כדי שתוכל בעתיד לכתוב את הסיפור האמיתי על בסיסו.
+• Fact Sheet / Lore Document (מסמך עובדות): ריכוז של ה"אמת" של העולם והדמויות שלך בצורה הכי נקייה ויבשה שיש.
+בקיצור, אלו הן ההערות והחוקים (Notes & Lore) שלך. זה הבסיס להכל.
+עכשיו כשהגדרנו את המסמך הזה, האם המטרה שלך היא לעשות לו סדר (Audit) כדי למצוא בו סתירות פנימיות, או שאתה רוצה להתחיל להרחיב אותו ולהוסיף עוד אירועי רקע?
+
+draft/story bible/scratchpad/outline. what is the differences
+
+Here is the direct comparison of these four writing documents. They each serve a completely different purpose in the writing process.
+
+Document	What is inside it?	Does it have emotions, talking, and descriptions?	What is it used for?
+Scratchpad 
+(The Messy Pile)	Unorganized thoughts, sudden ideas, messy event lists, and random backstory facts.	No. Just dry, messy notes as they pop into your brain.	To catch ideas before you forget them so you can organize them later.
+Story Bible 
+(The Encyclopedia)	Organized facts, character bios, world rules, magic systems, and historical timelines.	No. It is written like a Wikipedia page—just dry facts and explanations.	To keep your world consistent so you don't accidentally contradict your own rules.
+Outline 
+(The Roadmap)	A step-by-step list of plot events showing exactly what happens from Chapter 1 to the end.	No. It just states the actions (e.g., "John goes to the store. He discovers the key is missing.").	To plan the structure and pacing of the plot before you start writing.
+Draft 
+(The Actual Story)	The actual scenes of the book or movie, written in full prose or script format.	Yes. Packed with dialogue, character thoughts, deep emotions, and sensory details.	This is the actual book that the reader will eventually read.
+
+
+Summary of Your Situation
+
+What you described earlier—adding backstory, events, and explanations with no emotions or dialogue, but currently unorganized—means you have a Scratchpad that is slowly turning into a Story Bible. It is definitely not a draft or an outline yet!
+Now that you see the differences, do you want to clean up your Scratchpad and turn it into an organized Story Bible, or do you want to start turning those events into a step-by-step Outline?
+
+outline is an organized scratchpad?
+
+לא בדיוק. קווי הדמיון וההבדל המרכזיים ביניהם הם:
+• הדמיון: שניהם יבשים, בלי רגשות, ובלי דיאלוגים.
+• ההבדל המרכזי: אאוטליין (Outline) בנוי אך ורק סביב סדר כרונולוגי של העלילה (מה קורה אחרי מה בתוך הסיפור), בעוד שסקראצ'פד (Scratchpad) מכיל את כל סוגי המידע (חוקים, היסטוריית רקע, רעיונות לדמויות).
+אם ניקח את הבלגן של הסקראצ'פד ונעשה לו סדר, הוא יכול להפוך לשני דברים שונים:
+1. אאוטליין (Outline): אם תיקח מתוך הסקראצ'פד רק את האירועים ותסדר אותם לפי סדר כרונולוגי של הסיפור (סצנה 1, סצנה 2, סצנה 3).
+2. סטורי בייבל (Story Bible): אם תיקח מתוך הסקראצ'פד רק את ההסברים וחוקי הרקע ותסדר אותם לפי נושאים (תיקי דמויות, היסטוריה של העולם, חוקי הקסם).
+
+אנלוגיה פשוטה 🏗️
+
+• Scratchpad: ערימה מבולגנת של חומרי בניין (לבנים, תוכניות, צבעים, מסמרים).
+• Story Bible: המחסן המסודר שבו הלבנים בצד אחד, והצבעים בצד שני (לפי נושאים).
+• Outline: תוכנית העבודה שמראה בדיוק באיזה סדר מניחים את הלבנים כדי לבנות את הבית (סדר שלבים).
+האם רשימת האירועים שיש לך כרגע בסקראצ'פד מספרת סיפור מההתחלה ועד הסוף, או שהם סתם אירועים מפוזרים שקרו בזמנים שונים?
+
+compare narrative fact and world fact what is better for the things it extracts from the story and outline that is the complete truth
+
+המילים Narrative Fact ו-World Fact הן שני מושגים חיוניים לניתוח ועריכה של סיפור, במיוחד כשרוצים להצליב מידע ולמצוא סתירות.
+כשאתה מחפש את "האמת המוחלטת" (The Complete Truth) של הסיפור שלך, ההבדל ביניהן הוא קריטי:
+
+ההבדל המרכזי בטבלה
+
+
+מושג	מה זה אומר?	איפה זה נמצא?	דוגמה
+World Fact 
+(עובדת עולם)	האמת האובייקטיבית והמוחלטת של העולם שלך. חוקי הטבע, ההיסטוריה האמיתית ומה שבאמת קרה.	בתוך ה-Story Bible ובתוך המוח שלך.	"הקוסם הרשע מת לפני 100 שנה."
+Narrative Fact 
+(עובדה נרטיבית)	מה שהדמויות מאמינות בו, מה שמסופר בפועל, או איך שהאירועים מוצגים לקורא בנקודת זמן מסוימת.	בתוך ה-Outline ובתוך ה-Draft.	"הגיבור בטוח שהקוסם הרשע עדיין חי כי מישהו שיקר לו."
+
+
+מה מהם הוא "האמת המוחלטת" עבור המשימה שלך?
+
+זה תלוי בשלב שבו אתה נמצא:
+1. אם אתה רוצה לוודא שאין לך סתירות לוגיות (Consistency):
+הכלי הטוב ביותר הוא World Fact. אתה צריך להפיק רשימה של עובדות עולם יבשות ("דמות א' נולדה בשנת 1990", "הקסם דורש אנרגיה מהשמש"). זו האמת המוחלטת שלך. אם בנרטיב (בסיפור) פתאום דמות א' אומרת שהיא חגגה יום הולדת 50 בשנת 2010 – מצאת סתירה בין ה-Narrative Fact ל-World Fact.
+2. אם אתה מנסה לחלץ "מה קרה בפועל בתוך קו הזמן של העלילה":
+זה נקרא Narrative Fact המוחלט. לדוגמה: "בפרק 3 הגיבור מצא את המפתח" – זו עובדה נרטיבית (זה קרה בתוך העלילה). אם באאוטליין כתוב שהוא מצא את המפתח בפרק 3, אבל בטיוטה (Draft) שכחת מזה וכתבת שהוא עדיין מחפש אותו בפרק 5 – יש לך סתירה נרטיבית.
+
+סיכום
+
+כדי למצוא את האמת המוחלטת, World Fact הוא הבסיס (החוקים וההיסטוריה) ו-Narrative Fact הוא היישום (מה שקורה בפועל על הדף). הטעויות והסתירות הכי גדולות של סופרים קורות כשהנרטיב סותר את עובדות העולם.
+כשאתה מסתכל על הבלגן שיש לך כרגע בסקראצ'פד, האם רוב המידע שם הוא World Facts (חוקים, היסטוריית רקע, איך דברים עובדים) או Narrative Facts (מה הדמויות עושות ואיזה אירועים קורים במהלך העלילה)?

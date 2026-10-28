@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'screens/main_screen.dart';
+import 'views/library/library_view.dart';
 import 'themes/app_themes.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -15,7 +15,7 @@ class PlotSynthApp extends StatelessWidget {
       title: 'PlotSynth',
       debugShowCheckedModeBanner: false,
       theme: AppThemes.slateDark,
-      home: const MainScreen(),
+      home: const LibraryView(),
     );
   }
 }
