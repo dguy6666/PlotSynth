@@ -6,8 +6,8 @@ import 'package:plotsynth_app/models/sort_option.dart';
 //enum SortOption {date,name}
 class LibraryViewModel extends ChangeNotifier {
   final List<Project> _allProjects = [
-    Project(id: '1', name: "new project", lastModified: DateTime.now(), outlineHistory: [], storyHistory: [], isFavorite: false),
-    Project(id: '2', name: "ban", lastModified: DateTime.now().subtract(Duration(days: 12)), outlineHistory: [], storyHistory: [], isFavorite: false)
+    Project(id: '1', name: "new project", createdAt: DateTime.now(), updatedAt:  DateTime.now(), outlineHistory: [], writeHistory: [], isFavorite: false),
+    Project(id: '2', name: "ban", createdAt: DateTime.now().subtract(Duration(days: 12)), updatedAt: DateTime.now().subtract(Duration(days: 12)), outlineHistory: [], writeHistory: [], isFavorite: false)
   ];
   SortOption currentSort = SortOption.date;
   bool isAscending = false;
@@ -35,7 +35,7 @@ class LibraryViewModel extends ChangeNotifier {
       if (currentSort == SortOption.name) {
         cmp = a.name.toLowerCase().compareTo(b.name.toLowerCase());
       } else {
-        cmp = a.lastModified.compareTo(b.lastModified);
+        cmp = a.updatedAt.compareTo(b.updatedAt);
       }
 
       // 2. Return positive or negative based on direction
@@ -53,9 +53,10 @@ class LibraryViewModel extends ChangeNotifier {
     final newProject = Project(
       id: DateTime.now().millisecondsSinceEpoch.toString(),
       name: 'New Project',
-      lastModified: DateTime.now(),
+      createdAt: DateTime.now(),
+      updatedAt: DateTime.now(),
       outlineHistory: [],
-      storyHistory: [],
+      writeHistory: [],
       isFavorite: false,
     );
     _allProjects.add(newProject);

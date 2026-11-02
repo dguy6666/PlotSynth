@@ -59,7 +59,7 @@ class ProjectCard extends StatelessWidget {
                 ),
                 const SizedBox(height: 6),
                 Text(
-                  'Modified: ${_formatDate(project.lastModified)}',
+                  'Modified: ${_formatDate(project.updatedAt)}',
                   style: theme.textTheme.bodySmall?.copyWith(
                     color: theme.colorScheme.onSurfaceVariant,
                   ),
