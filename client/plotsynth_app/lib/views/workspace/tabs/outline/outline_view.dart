@@ -17,13 +17,24 @@ class _OutlineViewState extends State<OutlineView> {
   void initState() {
     super.initState();
     viewModel = OutlineViewModel(project: widget.project);
+    _textController = TextEditingController();
 
-    // 1. Pre-fill the text box with the project's saved outline:
-    _textController = TextEditingController(text: widget.project.currentOutline);
+    // 2. האזנה לשינויים ב-ViewModel (כאשר ה-DB מסיים לשלוף את הסנאפשוט האחרון)
+    viewModel.addListener(_onViewModelUpdate);
+  }
+
+  void _onViewModelUpdate() {
+    // עדכון ה-Controller רק אם הטקסט ב-ViewModel שונה ממה שמוצג כרגע
+    // ורק אם המשתמש לא מקליד כרגע (כדי לא לאפס סמן כתיבה)
+    if (_textController.text != viewModel.currentText && !viewModel.isLoading) {
+      _textController.text = viewModel.currentText;
+    }
   }
 
   @override
   void dispose() {
+    viewModel.removeListener(_onViewModelUpdate);
+    viewModel.dispose();
     _textController.dispose();
     super.dispose();
   }

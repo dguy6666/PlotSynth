@@ -27,7 +27,7 @@ class Project {
   String get currentStory =>
       writeHistory.isEmpty ? '' : writeHistory.last.content;
 
-  // Helper method to find a project by ID:
+  // Helper method to find a project by id:
   static Project? findById(List<Project> projects, String targetId) {
     for (final project in projects) {
       if (project.id == targetId) return project;

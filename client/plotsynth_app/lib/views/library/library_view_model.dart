@@ -1,21 +1,42 @@
 import 'package:flutter/material.dart';
 import 'package:plotsynth_app/models/project.dart';
 import 'package:plotsynth_app/models/sort_option.dart';
+import 'package:plotsynth_app/repositories/project_repository.dart'; // 1. ייבוא ה-Repository
 
-
-//enum SortOption {date,name}
 class LibraryViewModel extends ChangeNotifier {
-  final List<Project> _allProjects = [
-    Project(id: '1', name: "new project", createdAt: DateTime.now(), updatedAt:  DateTime.now(), outlineHistory: [], writeHistory: [], isFavorite: false),
-    Project(id: '2', name: "ban", createdAt: DateTime.now().subtract(Duration(days: 12)), updatedAt: DateTime.now().subtract(Duration(days: 12)), outlineHistory: [], writeHistory: [], isFavorite: false)
-  ];
+  // 2. מופע של ה-Repository שמקשר ל-DatabaseService
+  final ProjectRepository _repository = ProjectRepository();
+
+  // הרשימה מתחילה ריקה ונטענת ישירות מ-SQLite
+  List<Project> _allProjects = [];
+  bool isLoading = false;
+
   SortOption currentSort = SortOption.date;
   bool isAscending = false;
   bool showOnlyFavorites = false;
   String _searchQuery = '';
 
+  LibraryViewModel() {
+    // טעינת הפרויקטים הקיימים מ-SQLite ברגע שה-ViewModel נוצר
+    loadProjects();
+  }
+
+  // 3. שליפת כל הפרויקטים מה-Database דרך ה-Repository
+  Future<void> loadProjects() async {
+    isLoading = true;
+    notifyListeners();
+
+    try {
+      _allProjects = await _repository.getAllProjects();
+    } catch (e) {
+      debugPrint("Error loading projects: $e");
+    } finally {
+      isLoading = false;
+      notifyListeners();
+    }
+  }
+
   List<Project> get displayedProjects {
-    // 1. סינון לפי מועדפים אם המשתמש הפעיל את הכפתור
     List<Project> list;
     if (showOnlyFavorites) {
       list = _allProjects.where((p) => p.isFavorite).toList();
@@ -23,84 +44,110 @@ class LibraryViewModel extends ChangeNotifier {
       list = List.from(_allProjects);
     }
 
-    // 2. Filter by search query (case-insensitive):
     if (_searchQuery.isNotEmpty) {
       list = list.where((p) => p.name.toLowerCase().contains(_searchQuery)).toList();
     }
-    
+
     list.sort((a, b) {
       int cmp;
-
-      // 1. Choose what to compare
       if (currentSort == SortOption.name) {
         cmp = a.name.toLowerCase().compareTo(b.name.toLowerCase());
       } else {
         cmp = a.updatedAt.compareTo(b.updatedAt);
       }
 
-      // 2. Return positive or negative based on direction
-      if (isAscending) {
-        return cmp;
-      } else {
-        return -cmp; // Flips to descending
-      }
+      return isAscending ? cmp : -cmp;
     });
-    
+
     return list;
   }
 
-  Project createNewProject() {
+  // 4. יצירה ושמירה של פרויקט חדש ב-Database
+  Future<Project> createNewProject(String name) async {
     final newProject = Project(
       id: DateTime.now().millisecondsSinceEpoch.toString(),
-      name: 'New Project',
+      name: name,
       createdAt: DateTime.now(),
       updatedAt: DateTime.now(),
       outlineHistory: [],
       writeHistory: [],
       isFavorite: false,
     );
-    _allProjects.add(newProject);
-    notifyListeners();
+
+    try {
+      // קריאה ל-Repository -> קורא ל-DatabaseService -> נשמר ב-SQLite!
+      await _repository.insertProject(newProject);
+      _allProjects.add(newProject);
+      notifyListeners();
+    } catch (e) {
+      debugPrint("Error inserting new project: $e");
+    }
+
     return newProject;
   }
 
-  List<Project> get allProjects{
-    return _allProjects;
-  }
-  
-  // פונקציה לשינוי סוג המיון
-  void setSortOption(SortOption option) {
-    currentSort = option;
-    if(option == SortOption.name)
-    {
-      isAscending = true;
+  List<Project> get allProjects => _allProjects;
+
+  Future<void> renameProject(String projectId, String newName) async {
+    final index = _allProjects.indexWhere((p) => p.id == projectId);
+    if (index != -1) {
+      final project = _allProjects[index];
+      project.name = newName;
+      project.updatedAt = DateTime.now();
+      notifyListeners();
+
+      try {
+        await _repository.updateProject(project);
+      } catch (e) {
+        debugPrint("Error renaming project: $e");
+      }
     }
-    else if(option == SortOption.date){
-      isAscending = false;
-    }
-    notifyListeners(); // מרענן את המסך מיד!
   }
 
+  Future<void> deleteProject(String projectId) async {
+    _allProjects.removeWhere((p) => p.id == projectId);
+    notifyListeners();
+
+    try {
+      await _repository.deleteProject(projectId);
+    } catch (e) {
+      debugPrint("Error deleting project: $e");
+    }
+  }
+
+  void setSortOption(SortOption option) {
+    currentSort = option;
+    isAscending = (option == SortOption.name);
+    notifyListeners();
+  }
 
   void toggleSortDirection() {
     isAscending = !isAscending;
     notifyListeners();
   }
 
-  // פונקציה להדלקה/כיבוי של סינון המועדפים בלבד
   void toggleFavoritesOnly() {
     showOnlyFavorites = !showOnlyFavorites;
     notifyListeners();
   }
 
-  // פונקציה לסימון פרויקט בודד כמועדף (בלחיצה על לב בכרטיסייה)
-  void toggleProjectFavorite(String projectId) {
-    final project = _allProjects.firstWhere((p) => p.id == projectId);
-    project.isFavorite = !project.isFavorite;
-    notifyListeners();
+  // עדכון מועדף כולל עדכון ב-DB
+  Future<void> toggleProjectFavorite(String projectId) async {
+    final index = _allProjects.indexWhere((p) => p.id == projectId);
+    if (index != -1) {
+      final project = _allProjects[index];
+      project.isFavorite = !project.isFavorite;
+      notifyListeners();
+
+      try {
+        await _repository.updateProject(project);
+      } catch (e) {
+        debugPrint("Error updating favorite: $e");
+      }
+    }
   }
 
-  void search(String query){
+  void search(String query) {
     _searchQuery = query.trim().toLowerCase();
     notifyListeners();
   }

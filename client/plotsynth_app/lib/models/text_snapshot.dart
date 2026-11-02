@@ -1,3 +1,5 @@
+
+
 class TextSnapshot {
   final String id;
   final DateTime timestamp;
@@ -43,6 +45,16 @@ class TextSnapshot {
       timestamp: DateTime.now(),
       content: text,
       wordCount: words,
+    );
+  }
+
+    // ממיר שורה מתוך טבלת ה-SQLite לאובייקט TextSnapshot
+  factory TextSnapshot.fromRow(Map<String, dynamic> row) {
+    return TextSnapshot(
+      id: row['id'] as String,
+      content: row['content'] as String,
+      wordCount: row['wordCount'] as int,
+      timestamp: DateTime.parse(row['timestamp'] as String),
     );
   }
 }

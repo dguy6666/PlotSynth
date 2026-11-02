@@ -21,12 +21,12 @@ class OutlineViewModel extends ChangeNotifier {
     notifyListeners();
 
     try {
-      final latestSnapshot = await _repository.getLatestSnapshot(project.id, 'outline');
-      if (latestSnapshot != null) {
-        currentText = latestSnapshot.content;
+      final latest = await _repository.getLatestSnapshot(project.id, 'outline');
+      if (latest != null) {
+        currentText = latest.content;
       }
     } catch (e) {
-      debugPrint("Error loading outline: $e");
+      debugPrint("Error loading outline snapshot: $e");
     } finally {
       isLoading = false;
       notifyListeners();
@@ -49,8 +49,10 @@ class OutlineViewModel extends ChangeNotifier {
         tabType: 'outline',
         snapshot: newSnapshot,
       );
-    } catch (e) {
-      debugPrint("Error saving outline to DB: $e");
+      debugPrint("Outline saved to text_snapshots!");
+    } catch (e, stack) {
+      debugPrint("CRITICAL ERROR saving snapshot: $e");
+      debugPrint("Stack: $stack");
     }
 
     notifyListeners(); // מרענן את ה-UI

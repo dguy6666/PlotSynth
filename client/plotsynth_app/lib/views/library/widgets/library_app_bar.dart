@@ -27,7 +27,7 @@ class LibraryAppBar extends StatefulWidget implements PreferredSizeWidget {
   });
 
   @override
-  Size get preferredSize => const Size.fromHeight(kToolbarHeight + 80.0);
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight + 110.0);
 
   @override
   State<LibraryAppBar> createState() => _LibraryAppBarState();
@@ -136,7 +136,7 @@ Widget build(BuildContext context) {
                   ChoiceChip(
                     showCheckmark: false,
                     avatar: const Icon(Icons.access_time, size: 16),
-                    label: const Text('Last Modified'),
+                    label: const Text('By Date'),
                     selected: widget.currentSort == SortOption.date,
                     selectedColor: Theme.of(context).disabledColor,
                     onSelected: (selected) {
@@ -172,7 +172,7 @@ Widget build(BuildContext context) {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         Text(
-                          widget.isAscending ? 'Ascending' : 'Descending',
+                          widget.isAscending ? 'Asc..' : 'Desc..',
                           style: const TextStyle(fontSize: 13),
                         ),
                         const SizedBox(width: 4),
